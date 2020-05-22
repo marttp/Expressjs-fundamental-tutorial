@@ -12,7 +12,7 @@ router.post('/', bookController.addBook);
 
 router.put('/:id', bookController.updateBookByReplace);
 
-router.patch('/', bookController.updateBookByUpdateFields);
+router.patch('/:id', bookController.updateBookByUpdateFields);
 
 router.delete('/:id', bookController.deleteBookById);
 

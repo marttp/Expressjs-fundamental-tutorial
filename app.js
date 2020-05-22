@@ -5,6 +5,7 @@ const helmet = require('helmet');
 const cors = require('cors');
 
 // Import user-defined files / modules
+require('./configs/dbconfig');
 const appRoute = require('./routes');
 
 // User-defined variable

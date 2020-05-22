@@ -1,5 +1,5 @@
 const app = require('./app');
-const CONFIG = require('./config');
+const CONFIG = require('./configs/config');
 
 // Start server
 app.listen(CONFIG.PORT, () => {
