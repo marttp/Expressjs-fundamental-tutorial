@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+const { logger } = require('../utils/log.util');
+
 const DB_USER = 'root';
 const DB_PASSWORD = '123456789';
 const DB_HOST = 'localhost:27017';
@@ -16,9 +18,9 @@ mongoose.connect(mongoDbUrl, {
 });
 
 db.on('connected', () => {
-  console.log('Connected to MongoDB');
+  logger.info('Connected to MongoDB');
 });
 
 db.on('error', () => {
-  console.log('MongoDB connection error');
+  logger.info('MongoDB connection error');
 });

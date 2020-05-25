@@ -1,9 +1,11 @@
 const { ObjectId } = require('mongoose').Types;
+const { logger } = require('../utils/log.util');
 
 const bookModel = require('../models/book.model');
 
 const getAllBooks = async (req, res) => {
   const books = await bookModel.find({});
+  logger.info(books);
   res.status(200).send(books);
 };
 
